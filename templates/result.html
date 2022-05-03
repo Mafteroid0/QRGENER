@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+
+{% block tittle %}Генератор QR кодов{% endblock %}
+
+{% block content %}
+
+<img src="{{url_for('static', filename='imgs/some_file.png')}}">
+
+<a href="/" class="btn btn-secondary">Назад</a>
+{% endblock %}

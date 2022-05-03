@@ -1,0 +1,23 @@
+.a{
+height: 50px;
+}
+
+.a:hover{
+    background: #EAEAEA
+}
+.a:active{
+    background: #D8F9FF
+
+}
+header{
+    border-bottom: solid 2px #EAEAEA;
+}
+
+a.take_file_a{
+    font-size: 1.2rem;
+    color: #6c757d;
+    text-decoration-line: none;
+}
+a.nedolink{
+    color: #3498DB;
+}
