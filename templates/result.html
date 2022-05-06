@@ -7,4 +7,12 @@
 <img src="{{url_for('static', filename='imgs/some_file.png')}}">
 
 <a href="/" class="btn btn-secondary">Назад</a>
+{% if current_user.is_authenticated %}
+            <form action="" method="post">
+                <p>{{ form.submit(type="submit", class="btn btn-secondary") }}</p>
+            </form>
+
+        {% else %}
+                <a class="nav-link a" href="../login">Войдите, чтобы сохранить</a>
+        {% endif %}
 {% endblock %}

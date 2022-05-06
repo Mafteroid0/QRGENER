@@ -21,3 +21,8 @@ a.take_file_a{
 a.nedolink{
     color: #3498DB;
 }
+a.logout{
+    font-size: 1.2rem;
+    color: #fff;
+    text-decoration-line: none;
+}

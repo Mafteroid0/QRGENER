@@ -1,5 +1,7 @@
 {% extends "main.html" %}
 {% block tittle %}Мои QR коды{% endblock %}
 {% block content %}
-
+{% for el in range(x) %}
+<img src="{{url_for('static', filename='qrs/qr_user_0.jpg')}}">
+{% endfor %}
 {% endblock %}
