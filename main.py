@@ -77,6 +77,7 @@ def show():
     db_sess = db_session.create_session()
     qrc = db_sess.query(QRC).filter(QRC.user_id == current_user.id)
     x = 0
+    somar = []
     for el in qrc:
         print(el.info)
         img = Image.open(io.BytesIO(el.info))
@@ -85,9 +86,10 @@ def show():
         except FileExistsError:
             pass
         img.save(f"static/qrs/qr_user_{x}.jpg")
+        somar.append(f"qrs/qr_user_{x}.jpg")
         x += 1
 
-    return render_template('list.html', qrc=qrc, x = x)
+    return render_template('list.html', qrc=qrc, x = x, somar=somar)
 
 @app.route('/login',methods=['GET', "POST"])
 def form():

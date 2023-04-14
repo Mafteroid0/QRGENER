@@ -15,4 +15,4 @@ class QRC(SqlAlchemyBase, UserMixin):
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
     info = sqlalchemy.Column(sqlalchemy.BLOB)
-    user = orm.relation('User')
+    user = orm.relationship('User')
